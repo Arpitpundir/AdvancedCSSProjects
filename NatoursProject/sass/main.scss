@@ -1,15 +1,16 @@
-@import "abstract/functions";
-@import "abstract/mixins";
-@import "abstract/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
 @import "base/animations";
 @import "base/base";
-@import "base/typogrphy.scss";
+@import "base/typography.scss";
 @import "base/utilities.scss";
 
 @import "components/btn.scss";
 
 @import "layout/header.scss";
+@import "layout/grid.scss";
 @import "pages/home";
 
 

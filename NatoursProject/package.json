@@ -4,7 +4,7 @@
   "description": "natours landing page",
   "main": "index.js",
   "scripts": {
-    "compileSass": "node-sass sass/main.scss css/style.css"
+    "compileSass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "arpit pundir",
   "license": "ISC",
