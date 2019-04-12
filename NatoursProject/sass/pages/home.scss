@@ -1,0 +1,19 @@
+.about-section{
+    background-color: $color-grey-light;
+    margin-top: -20vh;//-ve margin increases the area of the element by given dimension
+    padding: 25rem 0;//to prevent margin collapse between heading and section element
+}
+
+.section-features{
+    background-color: $color-grey-light;
+    background-image:linear-gradient(to right bottom, rgba($color-primary-dark, .8), rgba($color-primary-light, .8)),
+                        url(../../img/nat-4.jpg);
+    padding: 10rem;//increases height as well as area of the element
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > *{
+        transform: skewY(7deg);
+    }
+}
