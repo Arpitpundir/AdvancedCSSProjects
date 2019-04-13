@@ -6,7 +6,7 @@
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 10rem;
-        transition: all .2s;
+        transition: all .3s;
         position: relative;
         font-size: 1.6rem;
         border: none;
@@ -35,6 +35,15 @@
 
         &::after{
             background-color: #fff; 
+        }
+    }
+
+    &--green{
+        background-color: $color-primary;
+        color: $color-white; 
+
+        &::after{
+            background-color: $color-primary; 
         }
     }
 
