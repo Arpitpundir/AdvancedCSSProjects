@@ -1,0 +1,58 @@
+.story{
+    width: 70%;
+    padding: 6rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    font-size: 1.6rem;
+    background-color: rgba($color-white, .5);
+    box-shadow: 0 1rem 6rem rgba($color-black, .1);
+    transform: skewX(-12deg);
+
+    &__shape{
+        position: relative;
+        shape-outside: circle(50% at 50% 50%);//half the length of the distance between center of the parent element and nearest side
+        float: left;
+        width: 15rem;
+        height: 15rem;
+        clip-path: circle(50% at 50% 50% );
+        transform: translateX(-20%) skewX(12deg);
+        //transform: skewX(12deg); two transform cannot be applied to same element
+        //for shape outside to work element must have defined height and width and must be floated.
+    }
+
+    &__text{
+        transform: skewX(12deg);
+    }
+
+    &__img{
+        height: 100%;
+        transition: all .4s;
+        transform: scale(1.4);
+        position: absolute;
+        left:-3rem;
+    }
+
+    &__caption{
+        font-size: 1.7rem;
+        position: absolute;
+        color:$color-white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , 20%);
+        text-align: center;
+        opacity: 0;
+        transition: all, .4s;
+        //z-index: 1;
+    }
+    &:hover &__caption{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &:hover &__img{
+        transform: scale(1);
+        filter: blur(3px) brightness(.8);
+    }
+
+
+}

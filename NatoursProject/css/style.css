@@ -78,7 +78,7 @@ body {
   color: transparent;
   transition: all .2s; }
   .heading-secondary:hover {
-    transform: skewY(2deg);
+    transform: skewY(3deg) scaleX(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
@@ -120,6 +120,15 @@ body {
 
 .u-margin-bottom-medium {
   margin-bottom: 6rem; }
+
+.u-margin-top-medium {
+  margin-top: 6rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-small {
+  margin-top: 2rem; }
 
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
@@ -305,6 +314,139 @@ body {
     font-size: 1.2rem;
     color: #fff; }
 
+.story {
+  width: 70%;
+  padding: 6rem;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+  font-size: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.1);
+  transform: skewX(-12deg); }
+  .story__shape {
+    position: relative;
+    shape-outside: circle(50% at 50% 50%);
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-20%) skewX(12deg); }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__img {
+    height: 100%;
+    transition: all .4s;
+    transform: scale(1.4);
+    position: absolute;
+    left: -3rem; }
+  .story__caption {
+    font-size: 1.7rem;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    opacity: 0;
+    transition: all, .4s; }
+  .story:hover .story__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1; }
+  .story:hover .story__img {
+    transform: scale(1);
+    filter: blur(3px) brightness(0.8); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .20;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.form__group {
+  padding: 1rem 0rem;
+  position: relative; }
+  .form__group:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.form__input {
+  width: 84%;
+  height: 5rem;
+  padding: 1.3rem 1.5rem;
+  border-radius: 2px;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-bottom: 3px solid rgba(85, 197, 122, 0);
+  background-color: white;
+  transition: all, .3s; }
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid #55c57a;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2); }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid orangered; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.6rem;
+  transition: all .2s; }
+
+.form__radio-input {
+  display: none; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem); }
+
+.form__radio-group {
+  display: inline-block;
+  width: 49%; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-left: 4.5rem;
+  position: relative; }
+
+.form__radio-button {
+  width: 3rem;
+  height: 3rem;
+  border: 5px #28b485 solid;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -0,5rem;
+  left: 0; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28b485;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity, .2s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -366,5 +508,23 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem;
+  padding: 25rem 0 13rem;
   margin-top: -8rem; }
+
+.section-story {
+  padding: 10rem;
+  position: relative; }
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9)); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0% 50%, rgba(255, 255, 255, 0) 50%), url(../../img/nat-10.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
